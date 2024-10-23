@@ -8,7 +8,7 @@ def ask_number(min_num, max_num):
     return user_number
 
 
-number = ask_number(MIN_NUMBER, MAX_NUMBER)
+number = 0
 def verify_number():
     if number < 5:
         print("Le nombre est plus grand !")
@@ -19,8 +19,5 @@ def verify_number():
 
 
 while number != 5:
-    verify_number()
     number = ask_number(MIN_NUMBER, MAX_NUMBER)
-    while number == 5:
-        print("Bravo, tu as trouver le nombre magique !")
-        break
+    verify_number()
