@@ -7,6 +7,10 @@ def ask_number(min_num, max_num):
             number_int = int(number_str)
         except ValueError:
             print("ERREUR: Tu dois entrer un nombre ! Retente ta chance.")
+        else:
+            if number_int < min_num or number_int > max_num:
+                print(f"ERREUR : Tu dois entrer un numbre entre {min_num} et {max_num}")
+                number_int = 0
     return number_int
 
 
