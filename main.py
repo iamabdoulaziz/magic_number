@@ -22,6 +22,8 @@ MAGIC_NUMBER = random.randint(MIN_NUMBER, MAX_NUMBER)
 
 health = HEALTH
 number = 0
+
+"""
 while not number == MAGIC_NUMBER and health > 0:
     number = ask_number(MIN_NUMBER, MAX_NUMBER)
     if number < MAGIC_NUMBER:
@@ -37,4 +39,24 @@ while not number == MAGIC_NUMBER and health > 0:
 
 if health == 0:
     print(f"Haha t'as perdu ! Le nombre magique était : {MAGIC_NUMBER}")
-""""""
+"""
+
+win = False
+for i in range(0, HEALTH):
+    health = HEALTH - i
+    number = ask_number(MIN_NUMBER, MAX_NUMBER)
+    if number < MAGIC_NUMBER:
+        print("Le nombre est plus grand !")
+        health -= 1
+        print(f"Nombre de vies: {health}")
+    elif number > MAGIC_NUMBER:
+        print("Le nombre est plus petit !")
+        health -= 1
+        print(f"Nombre de vies: {health}")
+    else:
+        print("Bravo, tu as trouvé le nombre magique !")
+        win = True
+        break
+
+if not win:
+    print(f"Haha, t'as perdu le nombre magique était : {MAGIC_NUMBER}")
