@@ -37,3 +37,4 @@ while not number == MAGIC_NUMBER and health > 0:
 
 if health == 0:
     print(f"Haha t'as perdu ! Le nombre magique était : {MAGIC_NUMBER}")
+""""""
